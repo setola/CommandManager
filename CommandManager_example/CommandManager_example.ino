@@ -1,5 +1,5 @@
 #include "Arduino.h"
-#include "../CommandManager.h"
+#include "CommandManager.h"
 
 // uncomment to see verbose debug
 //#define SERIALCOMMAND_DEBUG
@@ -8,7 +8,9 @@ CommandManager commands;
 // usual led pin on arduino boards
 int testPIN = 13;
 
-char *buffer[];
+// this is only for example, you can retrieve it
+// from a Serial\Ethernet\WebSocket\ecc connection
+char *buffer;
 
 void setup() {
   Serial.begin(9600);
